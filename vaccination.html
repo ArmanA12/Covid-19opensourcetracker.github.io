@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa&family=IBM+Plex+Mono:wght@100&family=Luxurious+Roman&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="lastpage.css">
+
+
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background-image: linear-gradient( rgb(208, 240, 240), rgb(221, 250, 252));
+        height: 2800px;
+    }
+    .main{
+    
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        right: 100px;
+
+    }
+    .main div{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 235px;
+        height: 240px;
+        left: 330px;
+        margin-left: 20px;
+        border-radius: 10px;
+        background:rgb(248, 247, 247);
+   
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .main p{
+        position: relative;
+        top: 35px;
+        font-size: 18px;
+        height: 100px;
+        padding: 8px;
+        background: rgb(30, 116, 108);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        color: rgb(212, 226, 238);
+        font-family: 'Comfortaa', cursive;
+    }
+    .main span{
+        position: absolute;
+        top: 169px;
+        font-size: 17px;
+        height: 57px;
+        font-family: 'Comfortaa', cursive;
+        padding-top: 15px;
+        font-weight: 600;
+        padding-left: 15px;
+        background: rgb(202, 198, 198);
+    }
+    .step p{
+        position: relative;
+        width: 75px;
+        height: 30px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: 500;
+        border: 1px solid rgb(173, 175, 173);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    #s1{
+        position: relative;
+        top: -460px;
+        left: 430px;
+        background: gainsboro;
+    }
+    #s2{
+        position: relative;
+        top: -512px;
+        left: 685px;
+        background: gainsboro;
+    }
+    #s3{
+        position: relative;
+        top: -452px;
+        left: 942px;
+        top: -565px;
+        background: gainsboro;
+    }
+    #head{
+        position:absolute;
+        display: flex;
+        top: -23px;
+        background: rgb(2, 87, 87);
+        width: 100%;
+        height: 80px;
+        padding-left: 60px;
+        align-items: center;
+        font-size: 28px;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(188, 199, 197);
+        text-shadow: 2px 2px 2px grey;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    }
+    #get{
+      position:relative;
+      left: 590px;
+      font-size: 30px;
+      top: 150px;
+      font-weight: 1000;
+      color: rgb(20, 145, 145);
+      font-family: 'Comfortaa', cursive;
+
+    }
+    #img{
+        position: absolute;
+        top: 220px;  
+        left: 30px;
+          }
+     .vac{
+         position: relative;
+         display: flex;
+         flex-direction: row;
+         height: 500px;
+         width: 1260px;
+         top: -160px;
+         background: aliceblue;
+         left: 5px;
+     }
+     #pm{
+         position: absolute;
+         font-size: 26px;
+         margin-left: 40px;
+         font-weight:900;
+          width: 700px;
+          color: rgb(20, 92, 68);
+          text-shadow: 2px 2px 2px rgb(207, 205, 205);
+          top: 90px;
+     }
+     .vac div{
+         width: 340px;
+         height: 230px;
+         margin-left: 23px;
+         margin-top: 110px;
+         background: rgb(253, 253, 253);
+         display: flex;
+         justify-content: center;
+         border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        color: grey;
+     }
+     .vac img{
+         border-radius:100%;
+         position: relative;
+        top: -40px;
+     }
+     .vac p{
+         position: absolute;
+         top: 160px;
+         font-weight: 600;
+         font-size: 19px;
+     }
+     .vac h2{
+         position: relative;
+         top: 80px;
+         left: -40px;
+      font-family: 'Comfortaa', cursive;
+     }
+     .does{
+         display: flex;
+         flex-direction: row;
+         width: 1240px;
+         justify-content: space-around;
+     }
+     .does div{
+         position: relative;
+         display: flex;
+         flex-direction: row;
+         height: 80px;
+         width: 340px;
+         top: -410px;
+         font-weight: 600;
+         justify-content: space-around;
+         color: gray;
+     }
+    .vacdata{
+        display: flex;
+         flex-direction: row;
+         width: 1240px;
+         justify-content: space-around;
+    }
+    .vacdata div{
+        position: relative;
+         display: flex;
+         flex-direction: row;
+         height: 80px;
+         width: 340px;
+         top: -460px;
+         font-weight: 1000;
+         justify-content: space-around;
+         color: rgb(128, 125, 125);
+    }
+    #sri{
+        position: relative;
+        left: 70px;
+    }
+    #sri1{
+        position: relative;
+        left: 40px;
+    }
+    #sri3{
+        position: relative;
+        left: 80px;
+    }
+    #last1{
+        position: relative;
+        left: -25px;
+    }
+    #last{
+        position: relative;
+        left: -24px;
+    }
+    .shere{
+        position: relative;
+        width: 1280px;
+        height: 390px;
+        top: -380px;
+        background: rgb(209, 213, 218);
+    }
+    .shere h3{
+        position: relative;
+        left: 630px;
+        font-size: 35px;
+        top: -430px;
+        width: 500px;
+        font-weight: 1000;
+        color: rgb(40, 119, 119);
+    }
+    .shere p{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        word-break: break-all;
+        width: 650px;
+        font-size: 16px;
+        top: -400px;
+        font-weight: 600;
+        left: 530px;
+      font-family: 'Comfortaa', cursive;
+       color: rgb(124, 95, 95);
+    }
+    .shere h4{
+        position: relative;
+        width: 195px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        background: rgb(34, 96, 100);
+      font-family: 'Comfortaa', cursive;
+      border-radius: 50px;
+      left: 610px;
+      top: -370px;
+
+    }
+    #mr {
+        position: absolute;
+        font-size: 17px;
+        width: 190px;
+        height: 100px;
+        text-align: center;
+        background: rgb(8, 8, 8);
+        color: rgb(247, 243, 243);
+        border-radius: 6px;
+       top: 910px;
+       left: 140px;
+        display: none;
+       opacity: 0.7;
+    }
+  #m{
+    position: absolute;
+        font-size: 17px;
+        width: 190px;
+        height: 100px;
+        text-align: center;
+        background: rgb(8, 8, 8);
+        color: rgb(247, 243, 243);
+        border-radius: 10px;
+       top: 910px;
+       left: 140px;
+       opacity: 0.7; 
+  }
+  .gp {
+      display: flex;
+      position:relative;
+      width: 1280px;
+      height: 500px;
+      top: -309px;
+      background-color: rgb(228, 248, 250);
+      font-size: 18px;
+      font-family: 'Comfortaa', cursive;
+    flex-direction: row;
+    text-align: center; 
+  }
+  #id{
+      position: relative;
+      top: -20px;
+      font-size: 16px;
+  }
+  .gp div{
+      position: relative;
+      display: flex;
+      width: 370px;
+      height: 280px;
+      margin-left: 30px;
+      top: 140px;
+      color:rgb(60, 5, 71);
+      border-radius: 10px;
+      background-color: rgb(249, 251, 252);
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+  #vaccinbyg{
+      position: relative;
+      top: 50px;
+      left: -80px;
+  }
+  #vaccinbytype{
+      position: relative;
+      left: -77px;
+      top: 50px;
+  }
+  #vaccinbyage{
+      position: relative;
+      left: -60px;
+      top: 40px;
+  }
+  .vp{
+      position: absolute;
+      left: 60px;
+      top: -10px;
+      color: grey;
+      font-weight: 900;
+  }
+  .pp{
+      position: relative;
+      width: 1270px;
+      height: 90px;
+      text-align: center;
+      top: -800px;
+  }
+  #pp1{
+      position: relative;
+      font-size: 28px;
+      font-weight: 1000;
+      color: rgb(17, 104, 104);
+      top: -8px;
+      
+  }
+  #pp2{
+      position: relative;
+      font-size: 20px;
+      top: -25px;
+      color: gray;
+      font-weight: 1000;
+  }
+  .mouse{
+      position: relative;
+      width: 200px;
+      height: 120px;
+      font-weight: 1000;
+      padding-top: 30px;
+      border-radius: 10px;
+      background: rgb(209, 209, 209);
+      top: -710px;
+      left: 110px;
+      display: none;
+  }
+  #shereinfo{
+      color: aliceblue;
+      text-decoration: none;
+  }
+  .slot{
+      position: relative;
+      width: 1106px;
+      height: 440px;
+      top: -440px;
+      background: white;
+      overflow: hidden;
+  }
+  .slot img{
+      position: relative;
+      left: 60px;
+      top: 60px;
+  }
+  .slot p{
+      position: relative;
+      width: 600px;
+      height: 60px;
+      left: 500px;
+      top: -400px;
+  }
+  #st1{
+      color: rgb(61, 77, 71);
+      font-size: 30px;
+      font-weight: 1000;
+      text-shadow: 2px 2px 2px rgb(192, 194, 194);
+  }
+  #st2{
+      color: rgb(61, 65, 65);
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Comfortaa', cursive;
+  }
+  #stg{
+      position: relative;
+      width: 200px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 70px;
+      background: rgb(38, 97, 82);
+      left: 660px;
+      top: -320px;
+  }
+  #stg1{
+      color: aliceblue;
+      text-decoration: none;
+  }
+  #verify{
+      position: relative;
+      font-size: 23px;
+      left: 800px;
+      width: 280px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      top: -5px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      background: rgb(24, 65, 58);
+  }
+  #v{
+      color: rgb(186, 189, 189);
+      text-decoration: none;
+  }
+  #v:hover{
+      color: rgb(235, 231, 172);
+      font-family: 'Comfortaa', cursive;
+
+  }
+  #last1 p{
+      position: relative;
+      left: -80px;
+  }
+  #last p{
+      position: relative;
+      left: -75px;
+  }
+  #gov p{
+      position: relative;
+      left: -60px;
+  }
+  #gov1 p{
+      position: relative;
+      left: -50px;
+  }
+</style>
+<body>
+    <h2 id="head">Creating India's Digital Health Ecosystem</h2>
+    <h3 id="verify"><a id="v" href="https://verify.cowin.gov.in/"> VERIFY CERTIFICATE</a></h3>
+    <p id="get">Get Vaccinated in 3 Easy Step</p>
+    <p id="pm">India is set to defeat Covid-19.
+        Every Indian is making it possible."
+        - PM Narendra Modi</p>
+    <img id="img" src="woman.png" alt="process" width="310px" height="409">
+    <div class="main">
+       <div>
+           <p> Books an Appointment on an Co-Win or Walk into any way Vaccinations centers</p>
+           <span> How to Book Appointment on CO-Win</span>
+       </div>
+       <div>
+        
+           <p> Get Your Vaccinations safely at the Time of Your Appointment and keep track</p>
+           <span> Dos and Doen't for Getting Vaccinated</span>
+       </div>
+       <div>
+           <p> Download your vaccinations certificate from Co-Win  and Wait for does #2</p>
+           <span> Download your vaccine Certificate</span>
+       </div>
+    </div>
+   <div class="step">
+       <p id="s1">step-1</p>
+       <p id="s2">step-2</p>
+       <p id="s3">step-3</p>
+   </div>
+   <div class="vac">
+      <div>
+          <img id="sri" src="does.png" alt="" width="80px" height="80px">
+          <p onmouseover="mr()"  onmouseout="mr1()">Total Vaccination Doeses ?</p>
+          <h2>1,79,99,05,208</h2>
+            
+      </div>
+      <div>
+          <img id="sri1" src="building.png" alt="" width="80px" height="80px">
+          <p onmouseover="site()" onmouseout="siteout()">Site Conducting Vaccinations ?</p>
+          <h2>58,726</h2>
+      </div>
+      <div>
+          <img id="sri3" src="note.png" alt="" width="80px" height="80px">
+          <p>OverAll Resistrations</p>
+          <h2>1,04,97,95,426</h2> 
+      </div> 
+      </div> 
+      <div class="does">
+          <div class="does1">
+              <p>Does 1</p>
+              <p>Does 2</p>
+              <p>Precautions Does</p>
+          </div>
+          <div id="gov">
+              <p>Government</p>
+              <p>Private</p>
+          </div>
+          <div id="last1">
+              <p>Age 15-17</p>
+              <p>Age 17-44</p>
+              <p>Age 45+</p>
+          </div>
+      </div>
+      <div class="vacdata">
+          <div>
+              <p>96,86,50,430</p>
+              <p>81,12,78,894</p>
+              <p>1,99,75,884</p>
+          </div>
+          <div id="gov1">
+              <p>57255</p>
+              <p>1471</p>
+          </div>
+          <div id="last">
+              <p>5,67,60,967</p>
+              <p>62,82,38,306</p>
+              <p>36,47,96,153</p>
+          </div>
+   </div>
+   <div class="shere">
+       <img id="shere" src="shere.png" alt="" height="460px" width="1280px">
+      <h3>Share Your Vaccination Status</h3>
+      <p>Be a Fighter! If you are fully or partially vaccinated, you can now share your vaccination status in your social circle. Let's encourage our friends and followers in joining India's battle against COVID-19.</p>
+      <h4 ><a id="shereinfo" href="https://cdn-api.co-vin.in/api/v3/vaccination/status/knowYourStatus"> Shere Your Status</a></h4>
+   </div>
+   <div class="gp">
+
+     <div> 
+         <h3  class="vp" onmouseover="pp()" onmouseout="pf()">Vaccinations by Gender</h3>
+        <canvas  id="vaccinbyg" width="600px" height="560px" style="margin-left: 180px;"></canvas>
+        
+     </div>
+     <div>
+         <h3 class="vp">Vaccinations by Type</h3>
+        <canvas class="gd" id="vaccinbytype" width="600px" height="560px" style="margin-left: 160px;"></canvas>
+      
+     </div>
+     <div>
+         <h3 class="vp"> Vaccinations by Age</h3>
+        <canvas class="gd" id="vaccinbyage" width="500px" height="450px" style="margin-left: 110px;"></canvas>
+
+     </div>
+   </div>
+   <div class="pp">
+       <p id="pp1">Here you can see the  Vaccinations data of INDIA</p>
+       <p id="pp2">
+        "India is set to defeat Covid-19.
+        Every Indian is making it possible."
+        - PM Narendra Modi , India running world largest vaccine drive
+       </p>
+   </div>
+   <div class="mouse" id="vp1">
+       <table>
+           <tr>
+               <th style="color: blue;">Male : </th>
+               <td style="color: blue;">909067037</td>
+           </tr>
+           <tr>
+               <th style="color: rgb(201, 8, 40);">Female : </th>
+               <td style="color: rgb(190, 10, 40);">871311291</td>
+           </tr>
+           <tr>
+               <th style="color: rgb(230, 190, 11);">Trangender : </th>
+               <td style="color: rgb(230, 190, 11);">4457643</td>
+
+           </tr>
+       </table>
+   </div>
+   <div class="slot">
+       <img src="slote1.png" alt="process" height="430px">
+       <p id="st1"> Corbevax Vaccine for Children</p>
+       <p id="st2">
+        Children not only survive but live safely in the COVID-19 pandemic by getting vaccinated. Corbevax is the only available vaccine for the Children of age group 12-14 yrs. There is 28 days gap after being administered with the first dose of Corbevax. Both online and walk-in are available.</p>
+        <h3 id="stg"> <a id="stg1" href="https://selfregistration.cowin.gov.in/"> Book Your Slot </a></h3>
+   </div>
+ <div class="lastpage">
+     <div class="mypage">
+    <img src="im.jpg" alt="process" width="150px" height="150px">
+     <div class="arman">
+         <p id="md">Md Arman Shekh </p>
+
+           <p id="aboutm"> Front End Developer || Machine Learning <br>
+             <p id="st">Expert @ CodeStudio</p>
+             <p id="co"> 3 Star Coder @  LEETCODE</p>
+             <hr id="hr">
+             <input id="search" type="search" placeholder="send message">
+             <button id="button" type="submit">send</button> 
+     </div>
+     <div class="res">
+         <h3 >RESOURCES</h3>
+         <p >About API <br> API Guidlines Postman <br> Overviews <br> Two Different  API <br> Covid-19-API.com
+         </p>
+         <hr>
+     </div>
+     <div class="ser"></div>
+     <h3>PLATEFORM AND SERVIES</h3>
+     <P>Open source  <br> Visual Studio <br> Resister <br> Vaccinations <br> Download certificates </P>
+     </div>
+ </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="vaccinations.js"></script>
+</html>

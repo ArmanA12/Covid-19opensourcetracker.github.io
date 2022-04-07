@@ -1,0 +1,98 @@
+.lastpage{
+    background-color: rgb(10, 74, 67);
+    height: 440px;
+    position: relative;  
+    top: -440px;
+    overflow: hidden;
+}
+.mypage{
+    width: 340px;
+    height: 440px;
+    border-right: 1px solid rgb(59, 243, 239);
+}
+.mypage img{
+    border-radius: 100px;
+    position: relative;
+    left: 85px;
+    top: 40px;
+}
+#md{
+    position: relative;
+    left: 45px;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 1000;
+    color: rgb(125, 120, 122);
+}
+#aboutm{
+    position: relative;
+    font-size: 18px;
+    font-weight: 1000;
+    left: 6px;
+    color: rgb(150, 151, 152);
+}
+#st{
+    position: relative;
+    left: 50px;
+    font-size: 25px;
+    top: -15px;
+   font-weight: 1000;
+   color: rgb(118, 125, 129);
+}
+#co{
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+    top: -28px;
+   font-weight: 1000;
+   color: rgb(139, 140, 141);
+}
+#hr{
+    position: relative;
+    top: -32px;
+}
+#search{
+    position: relative;
+    height: 35px;
+    left: 20px;
+    width: 200px;
+    top: -18px;
+}
+#button{
+    position: relative;
+    top: -18px;
+    left: 30px;
+    height: 34px;
+    width: 60px;
+    background-image: linear-gradient(to right, rgb(175, 205, 7),rgb(8, 128, 104));
+    border: none;
+    border-radius: 2px;
+}
+.res{
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    height: 180px;
+    left: 400px;
+    border-right: 1px solid rgb(175, 172, 166);
+}
+.res h3{
+    font-size: 22px;
+    margin-left: 20px;
+    color: rgb(176, 190, 190);
+}
+.res p{
+    position: relative;
+    top: -15px;
+    color: rgb(221, 223, 225);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.ser{
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 180px;
+    left: 700px;
+    border-right: 1px solid rgb(175, 172, 166);
+}

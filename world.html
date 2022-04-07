@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>world data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa&family=IBM+Plex+Mono:wght@100&family=Luxurious+Roman&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=IBM+Plex+Mono:wght@100&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 1550px;
+    }
+
+    #over {
+        display: flex;
+        position: relative;
+        top: -40px;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        width: 100%;
+        font-size: 35px;
+        color: rgb(252, 249, 249);
+        background-color: rgb(20, 85, 85);
+        font-weight: 1000;
+        font-family: 'Comfortaa', cursive;
+        text-shadow: 2px 2px 2px rgb(199, 192, 192);
+    }
+
+    .trd {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 340px;
+    }
+
+    .trd div {
+        display: flex;
+        height: 320px;
+        margin-left: 40px;
+        width: 318px;
+        margin-top: 40px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+
+    .trd p {
+        display: flex;
+        position: relative;
+        height: 65px;
+        justify-content: center;
+        top: -25px;
+        font-size: 23px;
+        font-weight: 1000;
+        align-items: center;
+        width: 400px;
+        font-family: 'Comfortaa', cursive;
+        background: rgb(236, 235, 235);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+
+    #totalcon {
+        position: relative;
+        top: -240px;
+        font-size: 32px;
+        font-family: 'Anton', sans-serif;
+        color: rgb(58, 58, 184);
+        left: 130px;
+    }
+
+    #curr {
+        position: relative;
+        top: -245px;
+        font-size: 23px;
+        font-weight: 1000;
+        left: 48px;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(58, 58, 184);
+    }
+
+    #totaldet {
+        position: relative;
+        top: -427px;
+        font-size: 27px;
+        font-weight: 300;
+        left: 530px;
+        font-weight: 300;
+        font-family: 'Anton', sans-serif;
+        color: rgb(214, 37, 37);
+    }
+
+    #pd {
+        position: relative;
+        top: -420px;
+        font-size: 27px;
+        font-weight: 1000;
+        left: 425px;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(214, 37, 37);
+    }
+
+    #totalrec {
+        position: relative;
+        top: -620px;
+        font-size: 27px;
+        font-weight: 300;
+        left: 900px;
+        font-weight: 300;
+        color: rgb(10, 139, 10);
+        font-family: 'Anton', sans-serif;
+    }
+
+    #rr {
+        position: relative;
+        top: -606px;
+        font-size: 25px;
+        font-weight: 1000;
+        left: 830px;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(10, 139, 10);
+    }
+
+    #myChart3 {
+        position: relative;
+        top: -1700px;
+        border-radius: 6px;
+        background-color: rgb(248, 250, 250);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #op {
+        position: relative;
+        top: -1700px;
+        font-size: 26px;
+        font-family: 'Comfortaa', cursive;
+        left: 350px;
+        color: rgb(66, 126, 106);
+        text-shadow: 2px 2px 2px rgb(240, 92, 92);
+        font-weight: 1000;
+    }
+
+    .modal {
+        position: relative;
+        top: 110px;
+        left: 183.5px;
+        border: 1px solid black;
+        display: none;
+    }
+
+    .sog1 {
+        position: absolute;
+        background-color: rgb(236, 236, 232);
+        border-radius: 6px;
+        top: -604px;
+        left: -945px;
+    }
+
+    #btn {
+        position: relative;
+        top: -220px;
+        left: 128px;
+        width: 140px;
+        height: 36px;
+        font-size: 18px;
+        color: rgb(120, 97, 224);
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border-radius: 2px;
+    }
+
+    #btn1 {
+        position: relative;
+        top: -405px;
+        left: 495px;
+        width: 140px;
+        height: 36px;
+        font-size: 18px;
+        color: rgb(20, 22, 21);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+         border: none;
+         border-radius: 2px;
+         color: rgb(196, 78, 78);
+    }
+
+    .modal1 {
+        position: relative;
+        top: 110px;
+        left: 167px;
+        border-radius: 6px;
+        display: none;
+    }
+
+    #btn2 {
+        position: relative;
+        top: -590px;
+        left: 880px;
+        width: 140px;
+        height: 36px;
+        font-size: 18px;
+        color: rgb(20, 22, 21);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border: none;
+        border-radius: 2px;
+        color: rgb(84, 184, 84);
+    }
+
+    .Data {
+        position: absolute;
+        background-color: rgb(236, 236, 232);
+        border-radius: 6px;
+        top: -796px;
+        left: -570px;
+    }
+
+    .gender {
+        position:relative;
+        display: flex;
+        flex-wrap: wrap;
+        top: -1760px;
+        width: 100%;
+        height: 600px;
+        background-image: linear-gradient(rgb(186, 233, 245),rgb(128, 182, 233));
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+
+    .gender div {
+        position: relative;
+        margin-left: 23px;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: 430px;
+        flex-wrap: wrap;
+        box-shadow: rgba(49, 48, 48, 0.24) 0px 3px 8px;
+        background-color: rgb(250, 249, 249);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    #male {
+
+        position: relative;
+        top: 85px;
+        left: -45px;
+    }
+    #trans{
+        position: relative;
+        top: 50px;
+        left: -20px;
+    }
+    #female{
+        position: relative;
+        top: 55px;
+        left: -10px;
+    }
+    .gender  span{
+        font-size: 22px;
+        height: 60px;
+        padding-left: 25px;
+        padding-top: 8px;
+        background-image: linear-gradient(to right, rgb(243, 245, 244),rgb(229, 229, 241));
+        word-wrap: break-word;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 1000;
+        color: rgb(87, 67, 67);
+        text-shadow: 2px 2px 2px rgb(216, 216, 210);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+    .page{
+        position: relative;
+        top: -1760px;
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to right, rgb(38,178,233),rgb(25, 179, 240));
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+    .page:hover{
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        
+    }
+    .page img{
+        top: -650px;
+        position: relative;
+        left: 700px;
+        border-radius: 10px;
+    }
+    #pag{
+        width: 700px;
+        padding-top: 100px;
+        font-size: 17px;
+        padding-left: 20px;
+        height: 300px;
+        font-weight: 1000;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(79, 77, 77);
+    }
+    #pagh{
+        position: relative;
+        top: 70px;
+        margin-left: 55px;
+        font-size: 34px;
+        font-weight: 1000;
+    }
+    #pagb{
+        position: relative;
+        color: rgb(234, 238, 238);
+        display: flex;
+        top: -120px;
+        font-size: 22px;
+        width: 200px;
+        height: 42px;
+        left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1.5px solid rgb(64, 147, 224);
+        border-radius: 100px;
+        background-image: linear-gradient(to right, rgb(54, 54, 172),rgb(54, 54, 172));
+    }
+    #foot{
+        position: relative;
+        background-image: radial-gradient(rgb(213, 218, 212),rgb(189, 187, 187),rgb(207, 204, 204));
+        width: 450px;
+        height: 20px;
+        top: -177px;
+        left: 700px;
+        border-radius: 100%;
+    }
+    .region{
+        position:relative;
+        top: -1360px;
+        width:100%;
+        height: 620px;
+        background-color: rgb(240, 240, 240);
+    }
+    .region div{
+        position: relative;
+          display: flex;
+          width: 350px;
+          height: 80px;
+          top:25px ;
+          margin-left: 40px;
+          flex-direction: row;
+         font-family: 'Comfortaa', cursive;
+          font-size: 21px;
+          font-weight: 1000;
+    }
+    .region span{
+        position: absolute;
+        top: 3px;
+        left: 255px;
+    }
+    .region p{
+        position:absolute;
+        width: 200px;
+        height: 15px;
+        margin-top: 38px;
+        background-color: rgb(128, 128, 31);
+        border-radius: 4px;
+    }
+    .region h4{
+        font-size: 12px;
+        position: absolute;
+        top: 15px;
+        left: 280px;
+    }
+    #e{
+        background-color: rgb(194, 221, 71);
+        width: 265px;
+    }
+    #a{
+        background-color: orange;
+        width: 230px;
+    }
+    #s{
+        background-color: rgb(5, 5, 116);
+        width: 130px;
+    }
+    #w{
+        background-color: rgb(92, 6, 66);
+        width: 47px;
+    }
+    #m{
+        background-color: rgb(9, 202, 144);
+        width: 47px;
+    }
+    #i{
+        background-color: rgb(153, 15, 207);
+        width: 20px;
+    }
+    .region h2{
+        position: relative;
+        top: 18px;
+        font-size: 30px;
+        margin-left: 20px;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 1000;
+    }
+
+    .region li{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        height: 38px;
+        align-items: center;
+        width: 120px;
+        margin-left: 30px;
+        left: 480px;
+        color: rgb(252, 253, 253);
+        font-size: 23px;
+        border-radius: 4px;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 600;
+        background-color: rgb(101, 122, 122);
+    }
+    .gp{
+        position: relative;
+        width: 700px;
+        height: 360px;
+        top: -1810px;
+        left: 420px;
+        color: rgba(247, 225, 189, 0.993);
+    }
+    #d1{
+        background-image: linear-gradient(rgba(154, 148, 245, 0.514),rgb(154, 154, 248));
+    }
+    #d2{
+        background-image: linear-gradient(rgba(241, 203, 203, 0.384),rgb(248, 146, 146));
+    }
+    #d3{
+        background-image: linear-gradient(rgba(93, 170, 6, 0.281),rgba(117, 231, 117, 0.842));
+    }
+    .hove {
+        position: relative;
+        width:150px;
+        font-size: 11px;
+        top: -3311px;
+        left: 500px;
+        text-align: center;
+    }
+    .hove p{
+        border-radius: 2px;
+        font-weight: 600;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+    .hove1{
+        position: relative;
+        width:150px;
+        height: 80px;
+        font-size: 11px;
+        top: -3380px;
+        left: 120px;
+        text-align: center;
+    }
+    .hove1 p{
+border-radius: 2px;
+font-weight: 600;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+transition: .3s;
+
+    }
+    .region li:hover{
+        background-color: rgb(61, 61, 165);
+    }
+    .close{
+        position:absolute;
+        top:-367px;
+        color: rgb(250, 250, 250);
+        text-align: center;
+        font-size: 25px;
+        width: 140px;
+        height: 32px;
+        padding-top: 6px;
+        background-color: rgb(10, 86, 185);
+        left: -56px;
+        border-radius: 2px;
+    }
+    .close1{
+        position:absolute;
+        top:-551px;
+        color: rgb(250, 250, 250);
+        text-align: center;
+        font-size: 25px;
+        width: 140px;
+        height: 32px;
+        padding-top: 6px;
+        background-color: rgb(121, 3, 3);
+        left: 328px;
+        border-radius: 2px;
+    }
+    #d3{
+        position: relative;
+        left: 28px;
+        color: rgb(156, 106, 126);
+    }
+    #myChartgp{
+        border-radius: 6px;
+    }
+    #rg{
+        background-image: linear-gradient(to right,rgb(72, 119, 100),rgb(86, 44, 80));
+    }
+    #ct{
+        background-image: linear-gradient(to right, rgb(77, 77, 31) , rgb(106, 51, 51));
+    }
+    #wk{
+        background-image: linear-gradient(to right, rgb(3, 32, 137) , rgb(38, 127, 47));
+    }
+    #dl{
+        background-image: linear-gradient(to right, rgb(3, 22, 94) , rgb(133, 134, 126));
+    }
+
+
+</style>
+
+<body>
+    <h2 id="over"> OverAll Covid-19 cases Across the WORLD</h2>
+    <div class="trd">
+        <div id="d1">
+            <p>Total CASES</p>
+        </div>
+        <div id="d2">
+            <p> ALL Deaths</p>
+        </div>
+        <div id="d3">
+            <p> All Recovered</p>
+        </div>
+    </div>
+    <p id="totalcon"> </p>
+
+    <p id="curr">Inafected Patients (97.2%)</p>
+
+    <button id='btn' class='button'>
+        Show Graph
+    </button>
+
+    <div id="myModal" class="modal">
+        <div class="modalContent">
+            <span class="close"> Show Data  </span>
+            <canvas class="sog1" id="sog" width="600px" height="400px" style="margin-left: 800px;"></canvas>
+        </div>
+    </div>
+    <p id="totaldet"></p>
+    <p id="pd"> Patients deaths (2%)</p>
+    <button id='btn1' class='button'>
+        Show Graph
+    </button>
+
+    <div id="myModal1" class="modal1">
+        <div class="modalContent1">
+            <span class="close1"> Show Data </span>
+            <canvas class="Data" id="sog5" width="680px" height="500px" style="margin-left: 800px;"></canvas>
+        </div>
+    </div>
+
+    <p id="totalrec"></p>
+    <p id="rr"> Recovery rate(98%)</p>
+    <button id='btn2' class='button'>
+        Show Graph
+    </button>
+
+    <div id="myModal2" class="modal2">
+        <div class="modalContent2">
+            <span class="close2"> &times; </span>
+            <canvas class="sog3" id="sog3" width="1900px" height="900px" style="margin-left: 900px;"></canvas>
+        </div>
+    </div>
+    <div class="region">
+        <h2>Situation by WHO Region</h2>
+            <li id="rg" onmouseover="rg()"> Region</li>
+            <li id="ct" onmouseover="ct()"> Country</li>
+            <li id="wk" onmouseover="kw()"> Weekly</li>
+            <li id="dl" onmouseover="dl()"> Deily</li>
+        <div>
+         Europe   <span>176,268,037</span> <h4>Confirmed</h4>
+         <p id="e"></p>
+        </div>
+        <div>
+            Americas  <span>146,449,865</span> <h4> Confirmed</h4>
+            <p id="a"></p>
+        </div>
+        <div>
+            South-East Asia  <span>55,509,874</span> <h4> Confirmed</h4>
+            <p id="s"></p>
+        </div>
+        <div> 
+            Western Pacific   <span> 22,662,357</span>  <h4> Confirmed</h4>
+            <p id="w"></p>
+        </div>
+        <div>
+            Eastern Mediterran  <span> 21,054,840 </span> <h4> Confirmed</h4>
+            <p id="m"></p>
+        </div>
+        <div>
+            Africa  <span>  8,311,827 </span>  <h4>Confirmed</h4>
+            <p id="i"></p>
+        </div>
+    </div>
+    <div class="gp" >
+    <canvas id="myChartgp" width="620px" height="290px" style="margin-left: 70x;"></canvas>
+    </div>
+    <div class="gender">
+        <div>
+          <span> World covid-19 deaths data Gender wise & percentage</span>
+            <canvas id="male" width="500px" height="280px" style="margin-left: 80px;"></canvas>
+
+        </div>
+        <div>
+          <span> World covid-19  Confirm data Gender wise </span>
+            <canvas id="female" width="550px" height="500px" style="margin-left: 20px;"></canvas>
+
+        </div>
+        <div>
+          <span> World covid-19 Recover data Gender wise </span>
+            <canvas id="trans" width="600px" height="560px" style="margin-left: 40px;"></canvas>
+
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 id="pagh">Precaution Dose and Children Vaccination</h2>
+        <p id="pag">Protect our Senior Citizens and Children. Precaution Dose is available for fully vaccinated HCW/FLW and Senior Citizens (60+ yrs) after 39 weeks from the 2nd dose. Citizens aged 60 years or more and having co-morbidities, should take precaution dose, only after medical advice. Also, getting your Children(15-18 yrs) vaccinated is the best thing you can do to protect your child against COVID-19. Both online and walk-in are available.</p>
+        <button type="button" onclick="myFunction()" id="pagb">See Imformations</button>
+        <p id="foot"> </p>
+        <img src="family.png" alt="process" width="440px" height="440px">
+    
+    </div>
+    <p id="op"> CountrVise Confirm and Deaths data </p>
+    <canvas id="myChart3" width="600px" height="280px" style="margin-left: 20x;"></canvas>
+
+   <div class="hove">
+       <p id="m1" style="background-color:rgb(255, 151, 168);">Male : </p>
+       <p id="f1" style="background-color: rgb(76, 147, 253);">Female :</p> 
+       <p id="g1" style="background-color: rgb(253, 253, 161);">TransGender :</p>
+    </div>
+    <div class="hove1">
+        <p id="k1" style="background-color:rgb(252, 153, 170);">Male : </p>
+        <p id="k2" style="background-color: rgb(86, 86, 255);">Female :</p> 
+        <p id="k3" style="background-color: rgb(250, 250, 164);">TransGender :</p>
+     </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="logic.js"></script>
+
+</html>

@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa&family=IBM+Plex+Mono:wght@100&family=Luxurious+Roman&display=swap"
+        rel="stylesheet">
+</head>
+<Style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+      .covid {
+        display: flex;
+        width: 100%;
+        background: rgba(30, 113, 116, 0.925);
+        position: absolute;
+        height: 96px;
+        padding-left: 40px;
+        color: aliceblue;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 358px;
+        height: 574px;
+        flex-wrap: wrap;
+        background: rgb(241, 241, 240);
+        border-radius: 20px;
+        top: 200px;
+        left: 50px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    }
+
+    input {
+        position: relative;
+        top: 110px;
+        left: 50px;
+        background: rgb(227, 242, 248);
+        border: 1px solid black;
+        border-radius: 2px;
+
+    }
+
+    #county {
+        top: 126px;
+        width: 500px;
+        height: 32px;
+
+    }
+
+    #sub {
+        height: 36px;
+        width: 118px;
+        background-image: linear-gradient(to right, rgb(65, 65, 61), rgb(8, 66, 49));
+        color: rgb(180, 180, 180);
+        font-size: 23px;
+        top: 129px;
+    }
+
+    #h4 {
+        position: absolute;
+        top: 33px;
+        font-size: 18px;
+        text-shadow: 2px 2px 2px rgb(68, 68, 68);
+        font-family: 'Comfortaa', cursive;
+        color: rgb(204, 203, 203);
+
+
+    }
+
+    #n {
+        text-shadow: 2px 2px 2px rgb(14, 13, 11);
+        color: rgb(198, 199, 198);
+    }
+
+    .a div {
+        position: relative;
+        top: 162px;
+        display: flex;
+        flex-direction: column;
+        width: 358px;
+        height: 103px;
+        background-image: linear-gradient(to right, rgb(177, 161, 161), rgb(175, 175, 170));
+    }
+
+    .a h1 {
+        position: relative;
+        top: -10px;
+        color: rgb(233, 219, 177);
+        font-size: 28px;
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    .a p {
+        position: relative;
+        top: -50px;
+        font-size: 32px;
+        color: rgb(236, 252, 252);
+
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    #A {
+        background-image: linear-gradient(to right, rgb(125, 117, 151), rgb(127, 133, 80));
+    }
+
+    #C {
+        background-image: linear-gradient(to right, rgb(198, 204, 180), rgb(247, 168, 49));
+
+    }
+
+    #r {
+        background-image: linear-gradient(to right, rgb(146, 240, 201), rgb(33, 128, 69));
+
+    }
+
+    #d {
+        background-image: linear-gradient(to right, rgb(206, 111, 111) 40%, rgb(253, 196, 196));
+
+    }
+
+    #s {
+        position: absolute;
+        font-size: 24px;
+        top: 45px;
+        left: 46px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    #s1 {
+        position: absolute;
+        top: 85px;
+        font-size: 17px;
+        left: 10px;
+        color: rgb(100, 102, 102);
+        font-family: 'Comfortaa', cursive;
+    }
+
+    #A:hover {
+
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgb(40, 108, 117), rgb(105, 30, 83));
+    }
+    #C:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgb(214, 156, 101), rgb(99, 84, 4));
+    }
+    #r:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgb(61, 117, 78), rgb(2, 85, 67));
+    }
+    #d:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgb(175, 49, 49), rgb(219, 124, 132))
+    }
+    .live {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        flex-direction: column;
+        left: 460px;
+        top: 320px;
+        width: 700px;
+        height: 500px;
+        border-bottom: 3px solid black;
+    }
+    .live div {
+        display: flex;
+        margin-top: 90px;
+        margin-left: 8px;
+        width: 280px;
+        height: 135px;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    #act {
+        border-radius: 40px;
+        position: relative;
+        top: 35px;
+        left: -40px;
+    }
+    .live img {
+        position: relative;
+        border-radius: 40px;
+    }
+    #cm {
+        border-radius: 40px;
+        position: relative;
+        top: 35px;
+        left: -100px;
+    }
+    #re {
+        border-radius: 40px;
+        position: relative;
+        top: 35px;
+        left: -85px;
+
+    }
+    #dt {
+        border-radius: 40px;
+        position: relative;
+        top: 35px;
+        left: -55px
+    }
+    #ve {
+        background-image: linear-gradient(to right, rgb(14, 16, 122), rgb(135, 205, 233));
+    }
+    #co {
+        background-image: linear-gradient(to right, rgb(130, 139, 1), rgb(235, 241, 197));
+    }
+    #res {
+        background-image: linear-gradient(to right, rgb(10, 109, 40), rgb(186, 245, 215));
+    }
+    #th {
+        background-image: linear-gradient(to right, rgb(240, 70, 84), rgb(243, 179, 164));
+
+    }
+
+    .live h2 {
+        position: relative;
+        left: 140px;
+        font-size: 28px;
+        color: azure;
+    }
+
+    .live p {
+        position: relative;
+        top: 30px;
+        font-size: 30px;
+    }
+
+    #confirm1 {
+        top: 40px;
+        left: -65px;
+        color: aliceblue;
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    .co {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
+    #Active1 {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        top: 40px;
+        left: -5px;
+        color: rgb(246, 251, 252);
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    #death1 {
+        top: 40px;
+        left: -5px;
+        color: rgb(246, 251, 252);
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    #Recover1 {
+        top: 40px;
+        left: -42px;
+        color: rgb(231, 250, 253);
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    #status {
+        position: absolute;
+        font-size: 30px;
+        font-family: 'Comfortaa', cursive;
+        left: 120px;
+        text-shadow: 2px 2px 2px rgb(148, 147, 147);
+        font-weight: 1000;
+    }
+
+    #sub:hover {
+        background-image: linear-gradient(to right, rgb(15, 15, 59), rgb(55, 108, 129));
+        color: rgb(248, 249, 250);
+        transition: 2s;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    #myChart {
+        display: flex;
+        position: relative;
+        margin-top: 370px;
+        width: 1400px;
+
+    }
+
+    #mainpara {
+        position: relative;
+        top: 300px;
+        font-size: 30px;
+        display: flex;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(63, 63, 63);
+        text-shadow: 2px 2px 2px rgb(211, 183, 183);
+        justify-content: center;
+        font-weight: 1000;
+    }
+
+    #h3 {
+        position: absolute;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        left: 560px;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    #h3:hover {
+
+        display: flex;
+        width: 250px;
+        height: 40px;
+        justify-content: center;
+        background-color: rgb(75, 77, 77);
+        color: rgb(185, 185, 144);
+        border-radius: 3px;
+    }
+
+    .login li {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 26px;
+        left: 650px;
+        top: 27px;
+        margin-left: 20px;
+        color: rgb(172, 189, 189);
+        background-color: rgb(4, 77, 90);
+        width: 90px;
+        height: 36px;
+        text-align: center;
+        padding-top: 1px;
+        border-radius: 4px;
+    }
+
+    li:hover {
+        background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(10, 10, 10));
+        color: aliceblue;
+    }
+
+    #myChart {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        background-color: rgb(248, 250, 252);
+        width: 1050px;
+
+    }
+
+    #myChart1 {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-top: 80px;
+        background-color: rgb(225, 228, 227);
+        left: -480px;
+        color: rgb(235, 162, 162);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: hidden;
+        width: 700px;
+        height: 360px;
+        opacity: 0.9;
+    }
+
+    #myChart2 {
+        position: relative;
+        top: 77px;
+        border-radius: 10px;
+        left: -80px;
+        background-color: rgb(225, 228, 227);
+        color: rgb(179, 218, 194);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    #dot {
+        position: absolute;
+        top: 2170px;
+        font-size: 26px;
+        left: 13px;
+        font-weight: 500;
+        color: rgb(245, 84, 84);
+        left: 100px;
+        font-weight: 1000;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #radar {
+        position: absolute;
+        top: 2140px;
+        font-size: 26px;
+        font-weight: 500;
+        color: rgb(40, 143, 36);
+        left: 830px;
+        font-weight: 1000;
+    }
+
+    .box {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        top: 200px;
+        padding-top: 30px;
+        width: 100vw;
+        height: 150px;
+        flex-direction: column;
+        background: rgb(187, 186, 186);
+        overflow: scroll;
+
+    }
+
+    .box div {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        width: 200px;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, rgb(8, 8, 8), rgb(5, 5, 5));
+        color: antiquewhite;
+        height: 130px;
+    }
+
+    .box p {
+        display: flex;
+        justify-content: center;
+        padding-left: 12px;
+        font-size: 20px;
+    }
+
+    table {
+        display: flex;
+        position: relative;
+        top: -30px;
+        padding: 20px;
+
+    }
+
+    .box th {
+        color: yellow;
+    }
+
+    #jammu {
+        font-size: 18px;
+    }
+
+    #worlds {
+        position: relative;
+        display: flex;
+        font-size: 25px;
+        top: 66px;
+        left: 800px;
+        border-radius: 4px;
+        width: 220px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 1000;
+        height: 39px;
+        background-image: linear-gradient(to right, rgb(122, 117, 118), rgb(41, 119, 150));
+        font-family: 'Comfortaa', cursive;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #worlds:hover {
+        color: antiquewhite;
+        background: black;
+    }
+
+    .lastpage {
+        position: relative;
+        top: 300px;
+        height: 560px;
+        width: 100%;
+    }
+    .div {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 700px;
+        height: 560px;
+        top: 600px;
+        left: 400px;
+        top: -260px;
+    }
+    .div div {
+        position: relative;
+        width: 230px;
+        height: 220px;
+        overflow: hidden;
+        margin-top: 30px;
+        border-radius: 10px;
+        left: 40px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-left: 60px;   
+    }
+
+    .div img {
+        position: relative;
+        top: -16px;
+        opacity: 0.6;
+    }
+
+    .div p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 1000;
+        top: -55px;
+        height: 53px;
+        align-items: center;
+        color: rgb(15, 15, 15);
+        background-image: linear-gradient(to right, rgb(248, 247, 247), rgb(248, 248, 233));
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    .div img {
+        background-color: rgb(19, 243, 243);
+    }
+
+    .lastpage img {
+        opacity: 0.8;
+    }
+
+    .div1 {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 380px;
+        height: 450px;
+        top: -760px;
+        left: 30px;
+        border-radius: 20px;
+        background-image: linear-gradient(grey, rgb(15, 15, 15));
+        opacity: 0.7;
+
+    }
+
+    .div1 p {
+        position: relative;
+        left: 100px;
+        font-size: 27px;
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        color: aliceblue;
+    }
+
+    #cp {
+        position: relative;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(247, 218, 181);
+    }
+
+    .div div:hover {
+        background-image: linear-gradient(rgb(2, 73, 73), rgb(3, 49, 109));
+        opacity: 0.5;
+    }
+
+    .pre {
+        position: relative;
+        top: -330px;
+        height: 500px;
+        width: 100vw;
+        background-image: linear-gradient(to right, rgb(95, 9, 3), rgb(2, 78, 2));
+        opacity: 0.9;
+    }
+
+    .spred {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        width: 550px;
+        left: 40px;
+    }
+
+    .spred div {
+        position: relative;
+        margin-left: 40px;
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 165px;
+        font-size: 22px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(0, 0, 0);
+        background-image: linear-gradient(white, rgb(192, 190, 190));
+        overflow: hidden;
+        top: 40px;
+    }
+
+    .spred img {
+        position: relative;
+        left: 40px;
+        padding-top: 10px;
+    }
+
+    #gath {
+        position: relative;
+        left: 0px;
+        height: 200px;
+    }
+
+    .spred p {
+        position: relative;
+        top: -10px;
+    }
+
+    #bottle {
+        position: relative;
+        left: 70px;
+    }
+
+    .prev {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        width: 550px;
+        left: 600px;
+        top: -500px;
+    }
+    .prev div {
+        position: relative;
+        margin-left: 40px;
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 165px;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(7, 7, 6);
+        background-image: linear-gradient(white, rgb(192, 190, 190));
+        overflow: hidden;
+        top: 40px;
+        text-shadow: 2px 2px 2px solid rgb(223, 222, 168);
+    }
+
+    #avoid {
+        position: relative;
+        left: 50px;
+        top: 15px;
+    }
+
+    #mask {
+        position: relative;
+        left: 40px;
+        top: 20px;
+    }
+
+    #wash {
+        position: relative;
+        top: -47px;
+        font-size: 22px;
+    }
+
+    #man {
+        position: relative;
+        top: -20px;
+    }
+
+    #face {
+        position: relative;
+        top: 20px;
+        font-size: 22px;
+    }
+
+    #loan {
+        position: relative;
+        top: -765px;
+        width: 620px;
+        height: 40px;
+        color: rgb(248, 245, 204);
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 1000;
+        font-family: 'Comfortaa', cursive;
+        box-shadow: rgba(214, 214, 216, 0.89) 0px 2px 5px -1px, rgba(219, 218, 218, 0.733) 0px 1px 3px -1px;
+
+    }
+
+    #lan {
+        position: relative;
+        top: -827px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 620px;
+        width: 500px;
+        height: 40px;
+        font-size: 22px;
+        color: rgb(245, 226, 187);
+        font-weight: 1000;
+        font-family: 'Comfortaa', cursive;
+        box-shadow: rgba(197, 197, 197, 0.89) 0px 2px 5px -1px, rgba(207, 207, 207, 0.733) 0px 1px 3px -1px;
+    }
+
+    .fact {
+        position: relative;
+        top: -1210px;
+        width: 100vw;
+        height: 29px;
+        display: flex;
+    }
+
+    .fact div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        top: 70px;
+        height: 200px;
+        margin-left: 50px;
+        margin-top: 50px;
+        background-image: linear-gradient(rgb(18, 50, 146), rgb(2, 95, 90));
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+
+    .fact p {
+        position: relative;
+        display: flex;
+        font-size: 23px;
+        width: 100px;
+        justify-content: center;
+        left: 100px;
+        height: 30px;
+        color: rgb(216, 213, 213);
+        top: 1px;
+        border-radius: 5px;
+        box-shadow: rgba(197, 197, 197, 0.89) 0px 2px 5px -1px, rgba(207, 207, 207, 0.733) 0px 1px 3px -1px;
+    }
+
+    .fact span {
+        text-align: center;
+        font-size: 16px;
+        color: rgb(207, 204, 204);
+        font-family: 'Comfortaa', cursive;
+
+    }
+
+    .fact h4 {
+        position: relative;
+        left: 30px;
+        width: 110px;
+        text-align: center;
+        height: 35px;
+        border-radius: 20px;
+        color: rgb(3, 3, 3);
+        font-family: 'Comfortaa', cursive;
+        padding-top: 8px;
+        background: rgb(249, 249, 250);
+    }
+
+    .factpara {
+        position: relative;
+        font-size: 18px;
+        width: 1000px;
+        top: -1210px;
+        font-weight: 600;
+        text-align: center;
+        left: 70px;
+        font-family: 'Comfortaa', cursive;
+        color: rgb(8, 57, 100);
+        font-weight: 1000;
+
+    }
+
+    .fact h4:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .covid a {
+        color: rgb(202, 200, 200);
+    }
+
+    #myth {
+        position: absolute;
+        width: 300px;
+        border-radius: 10px;
+        height: 210px;
+        background: rgb(255, 254, 254);
+        left: 50px;
+        top: 3078px;
+        font-weight: 1000;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: none;
+    }
+
+    #fact {
+        position: absolute;
+        width: 300px;
+        border-radius: 10px;
+        height: 210px;
+        background: rgb(255, 254, 254);
+        left: 400px;
+        top: 3073px;
+        font-weight: 1000;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: none;
+    }
+
+    #reality {
+        position: absolute;
+        width: 300px;
+        border-radius: 10px;
+        height: 210px;
+        background: rgb(248, 248, 248);
+        left: 750px;
+        top: 3077px;
+        font-weight: 1000;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: none;
+    }
+</Style>
+
+<body>
+    <div class="covid">
+        <h1 id="n"> COVID - 19</h1>
+        <h4 id="h4">Open Sourse Tracker</h4>
+        <h3 id="h3"><a href="vaccination.html">Vaccination-status</a></h3>
+        <div class="login">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="https://selfregistration.cowin.gov.in/">Sing-up</a></li>
+        </div>
+    </div>
+
+    <form id="seach">
+        <input type="text" id="county" placeholder="search" required>
+        <input id="sub" type="submit" value="search">
+    </form>
+    <p id="worlds"> <a href="world.html">World status</a></p>
+    <div class="a">
+        <span id="s"> CASES ACROSS INDIA</span>
+        <span id="s1"> All Covid-19 informations <br> See all status about india corona and Other Many news</span>
+        <div id="A">
+            <h1> Active </h1>
+            <p id="Active"></p>
+        </div>
+        <div id="C">
+            <h1> Confirmed </h1>
+            <p id="confirm"></p>
+        </div>
+        <div id="r">
+            <h1> Recovered </h1>
+            <p id="Recover"></p>
+        </div>
+        <div id="d">
+            <h1> Deaths </h1>
+            <p id="death"></p>
+        </div>
+    </div>
+
+    <div class="live">
+        <Span id="status">Live Covid-19 status of INDIA</Span>
+        <div id="ve">
+            <h2> Active</h2>
+            <img id="act" src="active.jpg" alt="process" width="70px" height="70px">
+            <p id="Active1"> </p>
+        </div>
+        <div id="co">
+            <h2> Confirmed </h1>
+                <img id="cm" src="conform.png" alt=" process" width="68px" height="68px">
+                <p id="confirm1"></p>
+        </div>
+        <div id="res">
+            <h2> Recovered </h2>
+            <img id="re" src="covidimage.jpg" alt="process" width="70px" height="70px">
+            <p id="Recover1"></p>
+        </div>
+        <div id="th">
+            <h2> Deaths </h2>
+            <img id="dt" src="death.jpg" alt="process" width="70px" height="70px">
+            <p id="death1"></p>
+        </div>
+    </div>
+    <Script>
+
+        const Api = "https://api.covid19api.com/total/dayone/country/india";
+
+        async function getdata() {
+            const response = await fetch(Api);
+
+            const data = await response.json();
+            var length = data.length;
+            var index = length - 1;
+            console.log("Array length " + length);
+            console.log(data);
+
+            var confirm = document.getElementById('confirm');
+            var Recover = document.getElementById('Recover');
+            var death = document.getElementById('death');
+            var Active = document.getElementById('Active');
+            var date = document.getElementById('date');
+
+            confirm.append(data[index].Confirmed);
+            Recover.append(data[504].Recovered);
+            death.append(data[index].Deaths);
+            Active.append(data[index].Active);
+        }
+
+        getdata();
+
+        const Api1 = "https://api.covid19api.com/live/country/india";
+
+        async function getdata1() {
+            const response = await fetch(Api1);
+
+            const data1 = await response.json();
+
+
+            console.log(data1);
+
+            var length = data1.length;
+            var index1 = length - 1;
+            console.log("Array length " + length);
+            console.log(data1);
+
+            var confirm1 = document.getElementById('confirm1');
+            var Recover1 = document.getElementById('Recover1');
+            var death1 = document.getElementById('death1');
+            var Active1 = document.getElementById('Active1');
+
+
+            confirm1.append(data1[index1].Confirmed);
+            Active1.append(data1[index1].Active);
+            Recover1.append(data1[1500].Recovered);
+            death1.append(data1[index1].Deaths);
+
+            var state = []
+            var confir = []
+            var deth = []
+            var act = []
+            var rec = []
+            for (i = 8300; i <= 8350; i++) {
+                confir.push(data1[i].Confirmed);
+                state.push(data1[i].Province);
+                deth.push(data1[i].Deaths);
+                act.push(data1[i].Active);
+            }
+            for (i = 1500; i < 1543; i++) {
+                rec.push(data1[i].Recovered)
+
+            }
+            console.log(state)
+            statee = ['Maharastra', 'Bihar', 'Up', 'Jharkhand', 'Rajasthan', 'Mp', 'Karnatka', 'Talangana', 'Karela', 'Goa', 'Sikkim', 'Mijoram', 'Utrakhand', 'ArunachalPR', 'WestBangal', 'Tripura', 'Odisha', 'AndhraPR', 'Chhattishghadh', 'Jammu Kashmir', 'Tamilnadu', 'Punjab', 'Gujrat', 'HimanchalPR', 'Haryana', 'Assam', 'Laddakh', 'Meghalaya', 'lakshadweep', 'Manipur', 'Andaman Nikobar', 'Chandighagh'];
+            var md = document.getElementById('md');
+            var mc = document.getElementById('mc');
+            var ma = document.getElementById('ma');
+            var mde = document.getElementById('mde');
+            md.append(data1[8417].Active);
+            mc.append(data1[8417].Confirmed);
+            ma.append(data1[8417].Active);
+            mde.append(data1[8417].Deaths);
+
+            var b1 = document.getElementById('b');
+            var bd = document.getElementById('bd');
+            var bc = document.getElementById('bc');
+            var ba = document.getElementById('ba');
+            b1.append(data1[8410].Active);
+            bd.append(data1[8410].Deaths);
+            bc.append(data1[8410].Confirmed);
+            ba.append(data1[8410].Active);
+
+            var up = document.getElementById('up');
+            var upd = document.getElementById('upd');
+            var upc = document.getElementById('upc');
+            var upa = document.getElementById('upa');
+            up.append(data1[8353].Confirmed);
+            upd.append(data1[8353].Deaths);
+            upc.append(data1[8353].Confirmed);
+            upa.append(data1[8353].Active);
+
+            var up = document.getElementById('rj');
+            var upd = document.getElementById('rd');
+            var upc = document.getElementById('rc');
+            var upa = document.getElementById('ra');
+            up.append(data1[8438].Confirmed);
+            upd.append(data1[8438].Deaths);
+            upc.append(data1[8438].Confirmed);
+            upa.append(data1[8438].Active);
+
+            var up = document.getElementById('t');
+            var upd = document.getElementById('td');
+            var upc = document.getElementById('tc');
+            var upa = document.getElementById('ta');
+            up.append(data1[8454].Confirmed);
+            upd.append(data1[8454].Deaths);
+            upc.append(data1[8454].Confirmed);
+            upa.append(data1[8454].Active);
+
+            var up = document.getElementById('k');
+            var upd = document.getElementById('kd');
+            var upc = document.getElementById('kc');
+            var upa = document.getElementById('ka');
+            up.append(data1[8457].Confirmed);
+            upd.append(data1[8457].Deaths);
+            upc.append(data1[8457].Confirmed);
+            upa.append(data1[8457].Active);
+
+            var up = document.getElementById('g');
+            var upd = document.getElementById('gd');
+            var upc = document.getElementById('gc');
+            var upa = document.getElementById('ga');
+            up.append(data1[8432].Confirmed);
+            upd.append(data1[8432].Deaths);
+            upc.append(data1[8432].Confirmed);
+            upa.append(data1[8432].Active);
+
+            var up = document.getElementById('j');
+            var upd = document.getElementById('jd');
+            var upc = document.getElementById('jc');
+            var upa = document.getElementById('ja');
+            up.append(data1[8448].Confirmed);
+            upd.append(data1[8448].Deaths);
+            upc.append(data1[8448].Confirmed);
+            upa.append(data1[8448].Active);
+
+            var up = document.getElementById('tn');
+            var upd = document.getElementById('tnd');
+            var upc = document.getElementById('tnc');
+            var upa = document.getElementById('tna');
+            up.append(data1[8446].Confirmed);
+            upd.append(data1[8446].Deaths);
+            upc.append(data1[8446].Confirmed);
+            upa.append(data1[8446].Active);
+
+            var up = document.getElementById('u');
+            var upd = document.getElementById('ud');
+            var upc = document.getElementById('uc');
+            var upa = document.getElementById('ua');
+            up.append(data1[8458].Confirmed);
+            upd.append(data1[8458].Deaths);
+            upc.append(data1[8458].Confirmed);
+            upa.append(data1[8458].Active);
+
+            var up = document.getElementById('mp');
+            var upd = document.getElementById('mpd');
+            var upc = document.getElementById('mpc');
+            var upa = document.getElementById('mpa');
+            up.append(data1[8449].Confirmed);
+            upd.append(data1[8449].Deaths);
+            upc.append(data1[8449].Confirmed);
+            upa.append(data1[8449].Active);
+
+            var up = document.getElementById('and');
+            var upd = document.getElementById('andd');
+            var upc = document.getElementById('andc');
+            var upa = document.getElementById('anda');
+            up.append(data1[8452].Confirmed);
+            upd.append(data1[8452].Deaths);
+            upc.append(data1[8452].Confirmed);
+            upa.append(data1[8452].Active);
+
+            var up = document.getElementById('arn');
+            var upd = document.getElementById('arnd');
+            var upc = document.getElementById('arnc');
+            var upa = document.getElementById('arna');
+            up.append(data1[8450].Confirmed);
+            upd.append(data1[8450].Deaths);
+            upc.append(data1[8450].Confirmed);
+            upa.append(data1[8450].Active);
+
+            var up = document.getElementById('hmc');
+            var upd = document.getElementById('hmcd');
+            var upc = document.getElementById('hmcc');
+            var upa = document.getElementById('hmca');
+            up.append(data1[8455].Confirmed);
+            upd.append(data1[8455].Deaths);
+            upc.append(data1[8455].Confirmed);
+            upa.append(data1[8455].Active);
+
+            var up = document.getElementById('mi');
+            var upd = document.getElementById('mid');
+            var upc = document.getElementById('mic');
+            var upa = document.getElementById('mia');
+            up.append(data1[8456].Confirmed);
+            upd.append(data1[8456].Deaths);
+            upc.append(data1[8456].Confirmed);
+            upa.append(data1[8456].Active);
+
+            var up = document.getElementById('pd');
+            var upd = document.getElementById('pdd');
+            var upc = document.getElementById('pdc');
+            var upa = document.getElementById('pda');
+            up.append(data1[8459].Confirmed);
+            upd.append(data1[8459].Deaths);
+            upc.append(data1[8459].Confirmed);
+            upa.append(data1[8459].Active);
+
+            var up = document.getElementById('pu');
+            var upd = document.getElementById('pud');
+            var upc = document.getElementById('puc');
+            var upa = document.getElementById('pua');
+            up.append(data1[8416].Confirmed);
+            upd.append(data1[8416].Deaths);
+            upc.append(data1[8416].Confirmed);
+            upa.append(data1[8416].Active);
+
+            var up = document.getElementById('kr');
+            var upd = document.getElementById('krd');
+            var upc = document.getElementById('krc');
+            var upa = document.getElementById('kra');
+            up.append(data1[8423].Confirmed);
+            upd.append(data1[8423].Deaths);
+            upc.append(data1[8423].Confirmed);
+            upa.append(data1[8423].Active);
+
+            var up = document.getElementById('wb');
+            var upd = document.getElementById('wbd');
+            var upc = document.getElementById('wbc');
+            var upa = document.getElementById('wba');
+            up.append(data1[8436].Confirmed);
+            upd.append(data1[8436].Deaths);
+            upc.append(data1[8436].Confirmed);
+            upa.append(data1[8436].Active);
+
+            var up = document.getElementById('ng');
+            var upd = document.getElementById('ngd');
+            var upc = document.getElementById('ngc');
+            var upa = document.getElementById('nga');
+            up.append(data1[8400].Confirmed);
+            upd.append(data1[8400].Deaths);
+            upc.append(data1[8400].Confirmed);
+            upa.append(data1[8400].Active);
+
+            var up = document.getElementById('dh');
+            var upd = document.getElementById('dhd');
+            var upc = document.getElementById('dhc');
+            var upa = document.getElementById('dha');
+            up.append(data1[8402].Confirmed);
+            upd.append(data1[8402].Deaths);
+            upc.append(data1[8402].Confirmed);
+            upa.append(data1[8402].Active);
+
+            var up = document.getElementById('ch');
+            var upd = document.getElementById('chd');
+            var upc = document.getElementById('chc');
+            var upa = document.getElementById('cha');
+            up.append(data1[8403].Confirmed);
+            upd.append(data1[8403].Deaths);
+            upc.append(data1[8403].Confirmed);
+            upa.append(data1[8403].Active);
+
+            var up = document.getElementById('go');
+            var upd = document.getElementById('god');
+            var upc = document.getElementById('goc');
+            var upa = document.getElementById('goa');
+            up.append(data1[8439].Confirmed);
+            upd.append(data1[8439].Deaths);
+            upc.append(data1[8439].Confirmed);
+            upa.append(data1[8439].Active);
+
+            var up = document.getElementById('o');
+            var upd = document.getElementById('od');
+            var upc = document.getElementById('oc');
+            var upa = document.getElementById('oa');
+            up.append(data1[8405].Confirmed);
+            upd.append(data1[8405].Deaths);
+            upc.append(data1[8405].Confirmed);
+            upa.append(data1[8405].Active);
+
+            var up = document.getElementById('me');
+            var upd = document.getElementById('med');
+            var upc = document.getElementById('mec');
+            var upa = document.getElementById('mea');
+            up.append(data1[8404].Confirmed);
+            upd.append(data1[8404].Deaths);
+            upc.append(data1[8404].Confirmed);
+            upa.append(data1[8404].Active);
+
+            var up = document.getElementById('a');
+            var upd = document.getElementById('ad');
+            var upc = document.getElementById('ac');
+            var upa = document.getElementById('aa');
+            up.append(data1[8424].Confirmed);
+            upd.append(data1[8424].Deaths);
+            upc.append(data1[8424].Confirmed);
+            upa.append(data1[8424].Active);
+
+            var up = document.getElementById('lk');
+            var upd = document.getElementById('lkd');
+            var upc = document.getElementById('lkc');
+            var upa = document.getElementById('lka');
+            up.append(data1[8408].Confirmed);
+            upd.append(data1[8408].Deaths);
+            upc.append(data1[8408].Confirmed);
+            upa.append(data1[8408].Active);
+
+            var up = document.getElementById('ld');
+            var upd = document.getElementById('ldd');
+            var upc = document.getElementById('ldc');
+            var upa = document.getElementById('lda');
+            up.append(data1[8431].Confirmed);
+            upd.append(data1[8431].Deaths);
+            upc.append(data1[8431].Confirmed);
+            upa.append(data1[8431].Active);
+
+            var up = document.getElementById('mni');
+            var upd = document.getElementById('mnid');
+            var upc = document.getElementById('mnic');
+            var upa = document.getElementById('mnia');
+            up.append(data1[8425].Confirmed);
+            upd.append(data1[8425].Deaths);
+            upc.append(data1[8425].Confirmed);
+            upa.append(data1[8425].Active);
+
+            var up = document.getElementById('chn');
+            var upd = document.getElementById('chnd');
+            var upc = document.getElementById('chnc');
+            var upa = document.getElementById('chna');
+            up.append(data1[8412].Confirmed);
+            upd.append(data1[8412].Deaths);
+            upc.append(data1[8412].Confirmed);
+            upa.append(data1[8412].Active);
+
+            var up = document.getElementById('jk');
+            var upd = document.getElementById('jkd');
+            var upc = document.getElementById('jkc');
+            var upa = document.getElementById('jka');
+            up.append(data1[8444].Confirmed);
+            upd.append(data1[8444].Deaths);
+            upc.append(data1[8444].Confirmed);
+            upa.append(data1[8444].Active);
+
+            var up = document.getElementById('sk');
+            var upd = document.getElementById('skd');
+            var upc = document.getElementById('skc');
+            var upa = document.getElementById('ska');
+            up.append(data1[8441].Confirmed);
+            upd.append(data1[8441].Deaths);
+            upc.append(data1[8441].Confirmed);
+            upa.append(data1[8441].Active);
+
+            var up = document.getElementById('tr');
+            var upd = document.getElementById('trd');
+            var upc = document.getElementById('trc');
+            var upa = document.getElementById('tra');
+            up.append(data1[8419].Confirmed);
+            upd.append(data1[8419].Deaths);
+            upc.append(data1[8419].Confirmed);
+            upa.append(data1[8419].Active);
+
+
+
+
+            var myChart = document.getElementById("myChart").getContext('2d');
+
+            var chart = new Chart(myChart, {
+                type: "line",
+                data: {
+                    labels: state,
+                    datasets: [
+                        {
+                            label: "confirmed cases",
+                            data: confir,
+                            fill: false,
+                            borderColor: "blue",
+                            backgroundColor: 'blue',
+                            minBarLength: 100,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Active cases",
+                            data: act,
+                            fill: false,
+                            borderColor: "rgb(75, 192, 192)",
+                            backgroundColor: "rgb(75, 192, 192)",
+                            minBarLength: 100,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Deaths",
+                            data: deth,
+                            fill: false,
+                            backgroundColor: "red",
+                            borderColor: "red",
+                            minBarLength: 100,
+                            tension: 0.2
+                        }, {
+                            label: " Recovered  cases",
+                            data: rec,
+                            fill: false,
+                            backgroundColor: 'green',
+                            borderColor: "green",
+                            minBarLength: 100,
+                            tension: 0.8
+                        }
+                    ]
+                },
+            })
+
+            var myChart1 = document.getElementById("myChart1").getContext('2d');
+
+            var chart1 = new Chart(myChart1, {
+                type: "line",
+                data: {
+                    labels: state,
+                    datasets: [{
+                        label: "deaths",
+                        data: deth,
+                        backgroundColor: 'rgb(248,185,185)',
+                        fill: true,
+                        borderColor: 'red',
+                        minBarLength: 500
+
+                    }
+                    ]
+                }
+            })
+
+            var myChart2 = document.getElementById("myChart2").getContext('2d');
+            var chart2 = new Chart(myChart2, {
+                type: "radar",
+                data: {
+                    labels: statee,
+                    datasets: [{
+                        label: "Recovered",
+                        data: rec,
+                        backgroundColor: 'green',
+                        fill: false,
+                        borderColor: 'rgb(179, 218, 194)',
+                        minBarLength: 100
+
+                    }
+                    ]
+                }
+            })
+        }
+        getdata1();
+
+        function no(obj) {
+            obj.innerHTML = "Fever is primary symptoms of covid-19  and its very normal , becouse fever is primary symptoms of every virus , Allways call before visiting your near doctor of health facilities and hospital People with mild symptoms who are otherwise....";
+            obj.style.fontSize = "20px";
+            obj.style.color = "rgb(247, 218, 181)";
+            obj.style.text = "30px";
+            obj.style.opacity = "0.7";
+            obj.style.border = "1.5px solid grey ";
+            obj.style.padding = "3px";
+        }
+
+        function dr(obj) {
+            obj.innerHTML = "Dry cough  is not  primary symptoms of covid-19  and its very normal , becouse cough is primary symptoms of every virus , Allways call before visiting your near doctor of health facilities and hospital People with mild symptoms who are otherwise....";
+            obj.style.fontSize = "20px";
+            obj.style.color = "rgb(247, 218, 181)";
+            obj.style.text = "30px";
+            obj.style.opacity = "0.7";
+            obj.style.border = "1.5px solid grey ";
+            obj.style.padding = "3px";
+        }
+        function sr(obj) {
+            obj.innerHTML = "Sore Threot  symptoms of covid-19  and its very normal , becouse fever is primary symptoms of every virus , Allways call before visiting your near doctor of health facilities and hospital People with mild symptoms who are otherwise....";
+            obj.style.fontSize = "20px";
+            obj.style.color = "rgb(247, 218, 181)";
+            obj.style.text = "30px";
+            obj.style.opacity = "0.6";
+            obj.style.border = "1.5px solid grey ";
+            obj.style.padding = "3px";
+        }
+        function br(obj) {
+            obj.innerHTML = "Breathing problem is symptoms of covid-19  and its very normal , its not big thing without that you can be effected to the  covid-19  virus , Allways call before visiting your near doctor of health facilities and hospital People with mild symptoms who are otherwise don't be pannic take patient";
+            obj.style.fontSize = "20px";
+            obj.style.color = "rgb(247,218,181)";
+            obj.style.text = "30px";
+            obj.style.opacity = "0.6";
+            obj.style.border = "1.5px solid grey ";
+            obj.style.padding = "3px";
+
+        }
+        function brt(obj) {
+            obj.style.backgroundColor = "black";
+            obj.style.color = "azure";
+            removeEventListener('mouseout', on);
+        }
+        function srt(obj) {
+            obj.style.backgroundColor = "black";
+            obj.style.color = "azure";
+        }
+        function drt(obj) {
+            obj.style.backgroundColor = "black";
+            obj.style.color = "azure";
+        }
+        function ot(obj) {
+            obj.style.backgroundColor = "black";
+            obj.style.color = "azure";
+        }
+        function myth() {
+            let h = document.getElementById('myth');
+            h.style.display = 'block';
+        }
+        function mythover() {
+            let k = document.getElementById('myth');
+            k.style.display = 'none';
+        }
+        function fact() {
+            let m = document.getElementById('fact');
+            m.style.display = 'block';
+        }
+        function factover() {
+            let n = document.getElementById('fact');
+            n.style.display = 'none';
+        }
+        function reality() {
+            let q = document.getElementById('reality');
+            q.style.display = 'block';
+        }
+        function realityover() {
+            let r = document.getElementById('reality');
+            r.style.display = 'none';
+        }
+    </Script>
+
+    <div id="mainpara">
+        stateVise current status of INDIA COVID-19
+    </div>
+    <div id="dot">
+        stateWise deaths - Dot Representing death
+    </div>
+    <p id="radar"> Recovered cases stateWise </p>
+
+    <canvas id="myChart" width="900px" height="480px" style="margin-left: 20px;"></canvas>
+    <div class="arman">
+        <canvas id="myChart1" width="1000px" height="500px" style="margin-left: 550px;"></canvas>
+        <canvas id="myChart2" width="400px" height="360px" style="margin-left: 890px;"></canvas>
+    </div>
+
+    <div class="box">
+        <div class="mh1">
+            <p> Maharastra</p>
+            <p id="md"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="mde" style="color: red;"></td>
+                </tr>
+                <tr id="mct">
+                    <th>Confirmed :</th>
+                    <td id="mc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(101, 247, 96);">Active :</th>
+                    <td id="ma" style="color: rgb(60, 218, 60);"></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="b1">
+            <p>Bihar</p>
+            <p id="b"></p>
+            <table>
+                <tr id="bdt">
+                    <th style="color: red;">Deaths :</th>
+                    <td id="bd" style="color: red;"></td>
+                </tr>
+                <tr id="bct">
+                    <th> Confirmed : </th>
+                    <td id="bc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(146, 231, 146);">Active :</th>
+                    <td id="ba" style="color: rgb(150, 224, 150);"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="up1">
+            <p>Uttapradesh</p>
+            <p id="up"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="upd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed</th>
+                    <td id="upc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(89, 218, 138);">Active</th>
+                    <td id="upa" style="color: rgb(154, 241, 154);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Rajasthan</p>
+            <p id="rj"></p>
+            <table>
+                <tr>
+                    <th style="color: red;"> Deaths : </th>
+                    <td id="rd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed</th>
+                    <td id="rc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(116, 221, 116);"> Active</th>
+                    <td id="ra" style="color: rgb(147, 241, 147);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Telangana</p>
+            <p id="t"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="td" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="tc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(130, 214, 130);">Active : </th>
+                    <td id="ta" style="color: rgb(134, 224, 134);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Karnatka</p>
+            <p id="k"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="kd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="kc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(139, 224, 139);">Active : </th>
+                    <td id="ka" style="color: rgb(154, 226, 154);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Gujrat</p>
+            <p id="g"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="gd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="gc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(138, 214, 138);">Active : </th>
+                    <td id="ga" style="color: rgb(146, 219, 146);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Jharkhand</p>
+            <p id="j"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="jd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="jc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(133, 221, 133);">Active : </th>
+                    <td id="ja" style="color: rgb(126, 212, 126);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>TamilNadu</p>
+            <p id="tn"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="tnd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="tnc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(130, 209, 130);">Active : </th>
+                    <td id="tna" style="color: rgb(159, 231, 159);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Uttarakhand</p>
+            <p id="u"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="ud" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="uc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(146, 223, 146);">Active : </th>
+                    <td id="ua" style="color: rgb(138, 214, 138);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Madhaya Pr</p>
+            <p id="mp"></p>
+            <table>
+                <tr>
+                    <th style="color: red ;">Deaths : </th>
+                    <td id="mpd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="mpc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(140, 221, 140);">Active : </th>
+                    <td id="mpa" style="color: rgb(150, 223, 150);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Andhara Pr</p>
+            <p id="and"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="andd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="andc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(138, 223, 138);">Active : </th>
+                    <td id="anda" style="color: rgb(118, 228, 118);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Arunachal PR</p>
+            <p id="arn"></p>
+            <table>
+                <tr>
+                    <th style="color: red;"> Deaths : </th>
+                    <td id="arnd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="arnc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(138, 236, 138);">Active : </th>
+                    <td id="arna" style="color: rgb(148, 235, 148);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>HimanchalPR</p>
+            <p id="hmc"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="hmcd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="hmcc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(132, 233, 132);">Active : </th>
+                    <td id="hmca" style="color: rgb(113, 219, 113);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Mijoram</p>
+            <p id="mi"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="mid" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="mic"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(127, 224, 127);">Active : </th>
+                    <td id="mia" style="color: rgb(131, 224, 131);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Puducherry</p>
+            <p id="pd"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="pdd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="pdc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(119, 224, 119);">Active : </th>
+                    <td id="pda" style="color: rgb(123, 209, 123);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Punjab</p>
+            <p id="pu"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="pud" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="puc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(116, 218, 116);">Active : </th>
+                    <td id="pua" style="color: rgb(131, 228, 131);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Karela</p>
+            <p id="kr"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="krd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="krc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(133, 235, 133);">Active : </th>
+                    <td id="kra" style="color: rgb(130, 231, 130);"></td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+            <p>WestBangal</p>
+            <p id="wb"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="wbd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="wbc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(89, 214, 89);">Active : </th>
+                    <td id="wba" style="color: rgb(104, 218, 104);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Assam</p>
+            <p id="a"></p>
+            <table>
+                <tr>
+                    <th style="color:red;">Deaths : </th>
+                    <td id="ad" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="ac"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(108, 218, 108);">Active : </th>
+                    <td id="aa" style="color: rgb(98, 221, 98);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Tripuraa</p>
+            <p id="tr"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="trd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="trc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(112, 236, 112);">Active : </th>
+                    <td id="tra" style="color:rgb(94, 221, 94)"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Nagaland</p>
+            <p id="ng"></p>
+            <table>
+                <tr>
+                    <th style="color: red ;">Deaths : </th>
+                    <td id="ngd" style="color:red"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="ngc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(103, 233, 103);">Active : </th>
+                    <td id="nga" style="color: rgb(106, 226, 106);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Delhi</p>
+            <p id="dh"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="dhd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="dhc"></td>
+                </tr>
+                <tr>
+                    <th style="color:rgb(90, 221, 90)">Active : </th>
+                    <td id="dha" style="color: rgb(91, 224, 91);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Chhattisgharh</p>
+            <p id="ch"></p>
+            <table>
+                <tr>
+                    <th style="color:red">Deaths : </th>
+                    <td id="chd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="chc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(86, 216, 86);">Active : </th>
+                    <td id="cha" style="color: rgb(109, 230, 109);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Goa</p>
+            <p id="go"></p>
+            <table>
+                <tr>
+                    <th style="color:red;">Deaths : </th>
+                    <td id="god" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="goc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(101, 230, 101);">Active : </th>
+                    <td id="goa" style="color:rgb(107, 221, 107)"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Maghalaya</p>
+            <p id="me"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="med" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="mec"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(71, 230, 71);">Active : </th>
+                    <td id="mea" style="color: rgb(93, 233, 93);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Odisha</p>
+            <p id="o"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="od" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="oc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(96, 236, 96);">Active : </th>
+                    <td id="oa" style="color: rgb(94, 228, 94);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Lakshadweep</p>
+            <p id="lk"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="lkd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="lkc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(108, 238, 141);">Active : </th>
+                    <td id="lka" style="color: rgb(80, 214, 80);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Laddakh</p>
+            <p id="ld"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="ldd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="ldc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(97, 230, 97);">Active : </th>
+                    <td id="lda" style="color: rgb(89, 228, 89);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Manipur</p>
+            <p id="mni"></p>
+            <table>
+                <tr>
+                    <th style="color: red;"> Deaths : </th>
+                    <td id="mnid" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="mnic"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(92, 221, 92);">Active : </th>
+                    <td id="mnia" style="color: rgb(100, 228, 100);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Chandighagh</p>
+            <p id="chn"></p>
+            <table>
+                <tr>
+                    <th style="color:red">Deaths : </th>
+                    <td id="chnd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="chnc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(60, 231, 60);">Active : </th>
+                    <td id="chna" style="color: rgb(77, 228, 77);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p id="jammu">Jammukashmir</p>
+            <p id="jk"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="jkd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="jkc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(78, 231, 78);">Active : </th>
+                    <td id="jka" style="color: rgb(64, 218, 64);"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Sikkim</p>
+            <p id="sk"></p>
+            <table>
+                <tr>
+                    <th style="color: red;">Deaths : </th>
+                    <td id="skd" style="color: red;"> </td>
+                </tr>
+                <tr>
+                    <th>Confirmed :</th>
+                    <td id="skc"></td>
+                </tr>
+                <tr>
+                    <th style="color: rgb(83, 216, 83);">Active : </th>
+                    <td id="ska" style="color: rgb(65, 214, 65);"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="lastpage">
+        <img src="pr.jpg" alt="process" height="560px" width="1100px">
+    </div>
+    <div class="div">
+        <div id="hat" onmouseover="no(this)" onmouseout="ot(this)">
+            <img src="b.png" alt="Process" width="230px" height="200px">
+            <p class="y">High Fever</p>
+        </div>
+        <div onmouseover="dr(this)" onmouseout="drt(this)">
+            <img src="dry.png" alt="" width="230px" height="200px">
+            <p class="y">Dry Cough</p>
+        </div>
+        <div class="x" onmouseover="sr(this)" onmouseout="srt(this)">
+            <img src="fever.jpg" alt="" width="230px" height="200px">
+            <p id="y">Sore Throet</p>
+        </div>
+        <div id="b" onmouseover="br(this)" onmouseout="brt(this)">
+            <img src="br.jpg" alt="" width="230px" height="200px">
+            <p class="y">Breathing problem</p>
+        </div>
+    </div>
+    <div class="div1">
+        <p>COVID-19 INDIA </p>
+        <span id="cp">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+
+            Most people infected with the virus will experience mild to moderate respiratory illness and recover without
+            requiring special treatment. However, some will become seriously ill and require medical attention. Older
+            people and those with underlying medical conditions like cardiovascular disease, diabetes, chronic
+            respiratory disease, or cancer are more likely to develop serious illness. Anyone can get sick with COVID-19
+            and become seriously ill or die at any age.
+
+            The best way to prevent </span>
+    </div>
+    <div class="pre">
+        <div class="spred">
+            <div>
+                <img src="air.png" alt="" height="90px" width="100px">
+                <p>Air by Cough or Sneeze</p>
+            </div>
+            <div>
+                <img src="hand.png" alt="" height="90px" width="100px">
+                <p>Personal Contact</p>
+
+            </div>
+            <div>
+                <img id="bottle" src="bottle.png" alt="" height="85px" width="60px">
+                <p>Contaminated Objects</p>
+            </div>
+            <div>
+                <img id="gath" src="gath.jpg" alt="" height="600px" width="200px">
+                <p>Mass Gathering</p>
+
+            </div>
+        </div>
+        <div class="prev">
+            <div>
+                <img src="handshake.png" alt="process" height="140px">
+                <p id="wash">Wash your Hands often</p>
+            </div>
+            <div>
+                <img id="mask" src="mask.png" alt="process" width="130px" height="80px">
+                <p id="face">Wear a Face Mask</p>
+            </div>
+            <div>
+                <img id="avoid" src="avoidhand.png" alt="process" width="100px" height="90px">
+                <p>Avoid Contact with Sick People</p>
+            </div>
+            <div>
+                <img src="man.png" alt="process">
+                <p id="man">Always Cover Your Cough or Sneeze </p>
+            </div>
+        </div>
+        <p id="loan">HOW IT'S SPREADS </p>
+        <p id="lan">PREVENTIONS</p>
+    </div>
+    </div>
+    <div class="fact">
+        <div>
+            <p>Myths</p>
+            <span>WHO giving warning to all over the world poeple for taking serius covid -19....</span>
+            <h4 onmouseover="myth()" onmouseout="mythover()">Read More</h4>
+        </div>
+        <div>
+            <p>Facts</p>
+            <span>Covid-19 is disease of think this is fake , thats spreading though virus the name of virus is
+                Ebola-sark-2...</span>
+            <h4 onmouseover="fact()" onmouseout="factover()">Read More</h4>
+        </div>
+        <div>
+            <p>Reality</p>
+            <span>The simtomps of covid-19 is very common , thats reason of people don't taking serius...</span>
+            <h4 onmouseover="reality()" onmouseout="realityover()">Read More</h4>
+        </div>
+    </div>
+    <div class="factpara">
+        Government of India is taking all necessary steps to ensure that we are prepared well to face the challenge and
+        threat posed by the growing pandemic of COVID-19 the Corona Virus. The most important factor in preventing the
+        spread of the Virus
+    </div>
+    <div id="myth">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eum libero, provident ab molestiae
+            consequuntur vitae neque recusandae dolorem ducimus perferendis, reprehenderit fugit ut repudiandae
+            aspernatur alias aperiam quaerat officia!6 </p>
+    </div>
+    <div id="fact">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eum libero, provident ab molestiae
+            consequuntur vitae neque recusandae dolorem ducimus perferendis, reprehenderit fugit ut repudiandae
+            aspernatur alias aperiam quaerat officia!6 </p>
+    </div>
+    <div id="reality">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eum libero, provident ab molestiae
+            consequuntur vitae neque recusandae dolorem ducimus perferendis, reprehenderit fugit ut repudiandae
+            aspernatur alias aperiam quaerat officia!6 </p>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="logic.js"></script>
+</html>

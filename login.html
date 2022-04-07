@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-signin-client_id"
+        content="315863857525-0rp0puh95bkj7ve2n1n1712u2glkvnnh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https:onts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa&family=IBM+Plex+Mono:wght@100&family=Luxurious+Roman&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="all.min.css">
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 600px;
+        background-image: linear-gradient(rgb(152, 211, 214), rgb(138, 204, 202));
+        position: sticky;
+    }
+
+    .login {
+        position: relative;
+        width: 320px;
+        top: 110px;
+        left: 460px;
+        height: 400px;
+        background-image: linear-gradient(rgb(64, 85, 85), rgb(8, 8, 8));
+        border-radius: 20px;
+    }
+
+    #user {
+        position: relative;
+        font-size: 90px;
+        display: flex;
+        color: rgb(168, 166, 163);
+        top: 40px;
+        justify-content: center;
+    }
+
+    #h1 {
+        position: relative;
+        top: 60px;
+        width: 200px;
+        height: 28px;
+        left: 34px;
+        border: 1px solid white;
+        border-radius: 2px;
+
+    }
+
+    #h2 {
+        position: relative;
+        font-size: 33px;
+        top: 68px;
+        left: 36px;
+        height: 39;
+        background: rgb(10, 10, 10);
+        width: 30px;
+        color: rgb(202, 214, 214);
+        border-radius: 4px;
+    }
+
+    #h3 {
+        position: relative;
+        top: 90px;
+        width: 200px;
+        height: 28px;
+        left: 67px;
+        border: 1px solid white;
+        border-radius: 2px;
+
+    }
+
+    #h5 {
+        position: relative;
+        top: 160px;
+        width: 200px;
+        height: 28px;
+        left: 60px;
+        color: black;
+
+
+    }
+
+    #h6 {
+        position: relative;
+        font-size: 33px;
+        top: 130px;
+        left: -208px;
+        height: 30;
+        background: rgb(8, 8, 8);
+        width: 30px;
+        color: rgb(239, 247, 247);
+        border-radius: 4px;
+
+
+    }
+
+    #h5 {
+        font-size: 25px;
+        text-align: center;
+        border-radius: 2px;
+        border: 1px solid white;
+        color: black;
+        cursor: pointer;
+        height: 35px;
+        top: 140px;
+        left: 70px;
+    }
+
+    #ch1 {
+        position: relative;
+        top: 98px;
+        left: -55px;
+    }
+
+    #ch2 {
+        position: relative;
+        top: 57px;
+        left: 170px;
+        color: beige;
+    }
+
+    #ch3 {
+        position: relative;
+        top: 23px;
+        left: 36px;
+
+    }
+
+    #ch4 {
+        position: relative;
+        top: -18px;
+        left: 60px;
+        color: beige;
+        font-size: 18px;
+    }
+
+    #h5:hover {
+        background-image: linear-gradient(to right, rgb(19, 58, 39), rgb(51, 18, 53));
+        border: 1px solid rgb(75, 48, 48);
+        border-radius: 30px;
+        color: rgb(208, 210, 214);
+        transition: 1s;
+        box-shadow: rgb(13, 13, 14) 0px 20px 30px -10px;
+    }
+    .g-signin2{
+        position: relative;
+        left: 570px;
+        top: 60px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="login">
+        <i id="user" class="fas fa-user-circle"></i>
+        <i id="h2" class="far fa-user"></i> <input id="h1" type="text" name="email" placeholder="username">
+        <i id="h6" class="fa fa-lock"></i><input id="h3" type="password" placeholder="password" required>
+        <input id="h5" type="button" value="Login" placeholder="Login">
+        <input id="ch1" type="checkbox">
+        <p id="ch2">Forgot ID & pass</p>
+        <input id="ch3" type="checkbox">
+        <p id="ch4">sign-in</p>
+    </div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script>
+
+</body>
+
+</html>
